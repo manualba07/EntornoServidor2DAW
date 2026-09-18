@@ -1,18 +1,32 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    Empleado e= new Empleado("James Coling","32000032G",'m',4,4);
-    Empleado e2=new Empleado("Ada Lovelace ","32000031R",'f');
+void main(String[] args) {
+    try {
+        /**Creación objetos (Empleado)*/
 
-    escribe(e);
-    escribe(e2);
+        Empleado e = new Empleado("James Coling", "32000032G", 'm', 4, 4);
+        Empleado e2 = new Empleado("Ada Lovelace ", "32000031R", 'f');
 
-    e2.incrAnyo();
-    e2.setCategoria(9);
+        /**Método escribe de empleado*/
+        escribe(e);
+        /**Método escribe de empleado*/
+        escribe(e2);
 
-    escribe(e);
-    escribe(e2);
+        /**Llamada a método incrementar años*/
+        e2.incrAnyo();
+        /**Método set categoria*/
+        e2.setCategoria(9);
+
+        /**Método escribe de empleado*/
+        escribe(e);
+        /**Método escribe de empleado*/
+        escribe(e2);
+    /**Captar excepcion*/
+    }catch (DatosNoCorrectosException e) {
+        System.out.println("Datos no correctos");
+        System.exit(1);
+    }
 }
+
+/**Creación de método escribe*/
 
 private void escribe (Empleado e){
     System.out.println(e.nombre+" "+e.dni+" "+e.sexo+" "+e.getCategoria()+" "+e.añosTrabajados);
