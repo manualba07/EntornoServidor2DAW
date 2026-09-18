@@ -31,7 +31,7 @@ public class Empleado extends Persona {
         return categoria;
     }
 
-    public void incrAnyo(int añosTrabajados){
+    public void incrAnyo(){
         añosTrabajados++;;
     }
 

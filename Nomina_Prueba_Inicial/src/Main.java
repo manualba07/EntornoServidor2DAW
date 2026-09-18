@@ -7,7 +7,7 @@ void main() {
     escribe(e);
     escribe(e2);
 
-    e2.incrAnyo(9);
+    e2.incrAnyo();
     e2.setCategoria(9);
 
     escribe(e);
